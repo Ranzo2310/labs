@@ -36,15 +36,15 @@ CI ( continuous Integration )
 
 Jenkins Job      : maven goal           : post build action 
                 
-job1-compile	 : /opt/mvn/bin/mvn compile              : NA
+job1-compile	 : /opt/maven/bin/mvn compile              : NA
 
-job2-codereview	 : /opt/mvn/bin/mvn -P metrics pmd:pmd   : **/pmd.xml (record compiler warnings & static analysis results)
+job2-codereview	 : /opt/maven/bin/mvn -P metrics pmd:pmd   : **/pmd.xml (record compiler warnings & static analysis results)
                  
-job3-unittest    : /opt/mvn/bin/mvn test                 : target/surefire-reports/*.xml (Publish Junit test results)
+job3-unittest    : /opt/maven/bin/mvn test                 : target/surefire-reports/*.xml (Publish Junit test results)
                  
-job4-codecoverage : /opt/mvn/bin/mvn verify              : **/**.exec (Record JaCoCo coverage report)
+job4-codecoverage : /opt/maven/bin/mvn verify              : **/**.exec (Record JaCoCo coverage report)
 
-job5-package     : /opt/mvn/bin/mvn package              : NA
+job5-package     : /opt/maven/bin/mvn package              : NA
 
 
 
